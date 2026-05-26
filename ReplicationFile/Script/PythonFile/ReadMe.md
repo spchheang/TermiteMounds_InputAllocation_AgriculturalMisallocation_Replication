@@ -1,67 +1,64 @@
+## SoilGrids Data Download Instructions
 
-# SoilGrids Download Instructions
+1. Go to the SoilGrids website:  
+   https://soilgrids.org/
 
-This repository uses soil covariates downloaded from the SoilGrids database developed by :contentReference[oaicite:0]{index=0}.
+2. Click:  
+   **Download → SoilGrids → Choose Layer**
 
-## SoilGrids Website
+3. Use the following settings:
 
-Download data from:
+### General Settings
 
-- :contentReference[oaicite:1]{index=1}
+- Version: SoilGrids v2.0
+- Release date: January 12, 2026
+- Resolution: 250 m
+- Statistic: Mean
 
-Navigation path:
+### Variables to Download
 
-1. Click **Download**
-2. Select **SoilGrids**
-3. Choose the desired soil layer(s)
-
----
-
-# Download Settings
-
-## Version
-
-Use the following SoilGrids release:
-
-- **SoilGrids v2.0**
-- **Release date:** January 12, 2026
-- **Spatial resolution:** 250 m
-
----
-
-# Soil Variables
-
-Download the following layers:
-
-- Clay content (%)
+- Clay (%)
 - Sand (%)
 - Bulk density
 - pH
 - SOC (Soil Organic Carbon)
 
-Additional contextual controls (optional but recommended):
+Optional additional variables:
 
 - Coarse fragments (%)
 - CEC (Cation Exchange Capacity)
 
----
+### Depth Intervals
 
-# Depth Intervals
-
-For each variable, download the following depth layers:
+Download each variable for:
 
 - 0–5 cm
 - 5–15 cm
 - 15–30 cm
 
-Statistic to select:
+### Geographic Extent (Cambodia)
+- Longitude: 102.3000 to 107.6000
+- Latitude: 10.4000 to 14.7000
 
+### Variables
+- Clay (%)
+- Sand (%)
+- Bulk density
+- pH
+- SOC (Soil Organic Carbon)
+- Coarse fragments (%)
+- CEC (Cation Exchange Capacity)
+
+# Depth Intervals
+For each variable, download the following depth layers:
+- 0–5 cm
+- 5–15 cm
+- 15–30 cm
+- 
+Statistic to select:
 - **Mean**
 
----
-
 # Geographic Extent (Cambodia)
-
 Use the following bounding box:
 
 | Coordinate | Minimum | Maximum |
@@ -72,8 +69,6 @@ Use the following bounding box:
 > **Note:**  
 > The bounding box is based on a 2° × 2° tile (~200 × 200 km).
 
----
-
 # Soil Texture Variables
 
 The main soil texture variables are:
@@ -81,8 +76,6 @@ The main soil texture variables are:
 - Clay (%)
 - Sand (%)
 - Silt (%)
-
----
 
 # Important Econometric Note
 

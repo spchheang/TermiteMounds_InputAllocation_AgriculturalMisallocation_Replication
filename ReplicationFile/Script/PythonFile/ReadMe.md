@@ -16,49 +16,24 @@
 - Statistic: Mean
 
 ### Variables to Download
-
 - Clay (%)
 - Sand (%)
 - Bulk density
 - pH
 - SOC (Soil Organic Carbon)
-
-Optional additional variables:
-
 - Coarse fragments (%)
 - CEC (Cation Exchange Capacity)
 
 ### Depth Intervals
-
 Download each variable for:
-
 - 0–5 cm
 - 5–15 cm
 - 15–30 cm
-
-### Geographic Extent (Cambodia)
-- Longitude: 102.3000 to 107.6000
-- Latitude: 10.4000 to 14.7000
-
-### Variables
-- Clay (%)
-- Sand (%)
-- Bulk density
-- pH
-- SOC (Soil Organic Carbon)
-- Coarse fragments (%)
-- CEC (Cation Exchange Capacity)
-
-# Depth Intervals
-For each variable, download the following depth layers:
-- 0–5 cm
-- 5–15 cm
-- 15–30 cm
-- 
+  
 Statistic to select:
 - **Mean**
-
-# Geographic Extent (Cambodia)
+  
+### Geographic Extent (Cambodia)
 Use the following bounding box:
 
 | Coordinate | Minimum | Maximum |
@@ -69,34 +44,23 @@ Use the following bounding box:
 > **Note:**  
 > The bounding box is based on a 2° × 2° tile (~200 × 200 km).
 
-# Soil Texture Variables
-
+### Soil Texture Variables
 The main soil texture variables are:
-
 - Clay (%)
 - Sand (%)
 - Silt (%)
+Soil texture variables are compositional:
 
-# Important Econometric Note
+`Sand + Silt + Clay ≈ 100`
 
-Because soil texture shares are compositional:
-
-\[
-\text{Sand} + \text{Silt} + \text{Clay} \approx 100
-\]
-
-including all three variables simultaneously in a regression with an intercept creates perfect multicollinearity.
-
-## Recommended Practice
-
-Include only **two** of the three variables in regression models.
+Therefore, including all three variables simultaneously in a regression with an intercept creates perfect multicollinearity. To avoid this issue, include only two of the three variables in regression models.
 
 Common specification:
 
 - Clay (%)
 - Sand (%)
 
-The omitted category (e.g., silt) becomes the reference category.
+The omitted variable (e.g., silt) serves as the reference category.
 
 ---
 
@@ -112,10 +76,12 @@ The omitted category (e.g., silt) becomes the reference category.
 
 ---
 
-# Citation
+### Citation
 
-Please cite :contentReference[oaicite:2]{index=2} and the SoilGrids database when using these data in replication or derivative work.
+Please cite:
 
-Official website:
+- ISRIC — World Soil Information
+- SoilGrids database
 
-- :contentReference[oaicite:3]{index=3}
+Official website: https://soilgrids.org/
+

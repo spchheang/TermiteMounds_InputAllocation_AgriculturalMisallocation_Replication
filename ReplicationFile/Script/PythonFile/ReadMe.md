@@ -1,87 +1,26 @@
-## SoilGrids Data Download Instructions
+### Python File: Required Input Data
 
-1. Go to the SoilGrids website:  
-   https://soilgrids.org/
+The Python script requires several external spatial datasets as input files. These datasets are not stored directly in the repository because of file size and source restrictions. Instead, users should download each dataset by following the corresponding instruction files provided in this GitHub repository.
 
-2. Click:  
-   **Download → SoilGrids → Choose Layer**
+The required data sources include census boundaries, catchment boundaries, topographic variables, soil characteristics, waterways, and climate variables. These files are used to construct geographic and environmental characteristics for the study area, including village-level buffers, distance to water sources, soil properties, climate measures, and terrain characteristics.
 
-3. Use the following settings:
+#### Required Data Sources
 
-### General Settings
+Please download the required input data by following the instructions in the links below:
 
-- Version: SoilGrids v2.0
-- Release date: January 12, 2026
-- Resolution: 250 m
-- Statistic: Mean
+| Data Source         | Description                                                                                                                                                                                                                                                              | Download Instructions                                                                                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Census 2008         | Cambodia Population Census 2008 shapefiles, including village-level boundaries used to create 1 km buffer zones around village areas                                                                                                                                     | [Census2008.md](https://github.com/spchheang/TermiteMounds_InputAllocation_AgriculturalMisallocation_Replication/blob/main/ReplicationFile/Script/PythonFile/Census2008.md)     |
+| Chrey Bak Catchment | Boundary file used to map and define the Chrey Bak Catchment study area in Kampong Chhnang Province, together with the TM_Village.csv file containing village names from the plot-level data used in the paper to map villages within the Chrey Bak Catchment study area | [ChreyBak.md](https://github.com/spchheang/TermiteMounds_InputAllocation_AgriculturalMisallocation_Replication/blob/main/ReplicationFile/Script/PythonFile/ChreyBak.md)         |
+| EarthEnv            | Topographic variables, including elevation, slope, and terrain ruggedness index                                                                                                                                                                                          | [EarthEnv.md](https://github.com/spchheang/TermiteMounds_InputAllocation_AgriculturalMisallocation_Replication/blob/main/ReplicationFile/Script/PythonFile/EarthEnv.md)         |
+| SoilGrids           | Soil characteristics, including soil organic carbon, pH, bulk density, coarse fragments, cation exchange capacity, clay, sand, and silt                                                                                                                                  | [SoilGrids.md](https://github.com/spchheang/TermiteMounds_InputAllocation_AgriculturalMisallocation_Replication/blob/main/ReplicationFile/Script/PythonFile/SoilGrids.md)       |
+| Waterways           | Cambodia waterways shapefile from HOT/OSM, used to calculate distance from villages to the nearest water source                                                                                                                                                          | [WaterWays.md](https://github.com/spchheang/TermiteMounds_InputAllocation_AgriculturalMisallocation_Replication/blob/main/ReplicationFile/Script/PythonFile/WaterWays.md)       |
+| WorldClim           | Climate variables, including annual mean temperature and annual precipitation                                                                                                                                                                                            | [WorldClimate.md](https://github.com/spchheang/TermiteMounds_InputAllocation_AgriculturalMisallocation_Replication/blob/main/ReplicationFile/Script/PythonFile/WorldClimate.md) |
 
-### Variables to Download
-- Clay (%)
-- Sand (%)
-- Bulk density
-- pH
-- SOC (Soil Organic Carbon)
-- Coarse fragments (%)
-- CEC (Cation Exchange Capacity)
+#### Purpose of the Python Script
 
-### Depth Intervals
-Download each variable for:
-- 0–5 cm
-- 5–15 cm
-- 15–30 cm
-  
-Statistic to select:
-- **Mean**
-  
-### Geographic Extent (Cambodia)
-Use the following bounding box:
+The Python script processes and combines these spatial datasets to create geographic, climatic, soil, and environmental variables for the analysis. In particular, the script uses the village-level census shapefile to create a 1 km buffer zone around each village area and then extracts or calculates characteristics from the external spatial datasets within those buffer zones.
 
-| Coordinate | Minimum | Maximum |
-|---|---|---|
-| Longitude | 102.3000 | 107.6000 |
-| Latitude | 10.4000 | 14.7000 |
+The resulting variables are used as geographic and environmental controls in the empirical analysis.
 
-> **Note:**  
-> The bounding box is based on a 2° × 2° tile (~200 × 200 km).
-
-### Soil Texture Variables
-The main soil texture variables are:
-- Clay (%)
-- Sand (%)
-- Silt (%)
-Soil texture variables are compositional:
-
-`Sand + Silt + Clay ≈ 100`
-
-Therefore, including all three variables simultaneously in a regression with an intercept creates perfect multicollinearity. To avoid this issue, include only two of the three variables in regression models.
-
-Common specification:
-
-- Clay (%)
-- Sand (%)
-
-The omitted variable (e.g., silt) serves as the reference category.
-
----
-
-# Interpretation of Additional Soil Controls
-
-| Variable | Interpretation |
-|---|---|
-| SOC | Soil fertility proxy |
-| pH | Nutrient availability |
-| Bulk density | Soil compaction, root growth, and water infiltration |
-| Coarse fragments (%) | Reduces water-holding capacity and rooting volume |
-| CEC | Nutrient retention capacity |
-
----
-
-### Citation
-
-Please cite:
-
-- ISRIC — World Soil Information
-- SoilGrids database
-
-Official website: https://soilgrids.org/
 

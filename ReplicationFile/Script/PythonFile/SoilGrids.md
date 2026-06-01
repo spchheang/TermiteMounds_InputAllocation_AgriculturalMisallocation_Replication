@@ -57,7 +57,7 @@ To avoid perfect multicollinearity in regression models, only two of the three s
 
 ---
 
-# Interpretation of Additional Soil Controls
+# Interpretation of Soil Controls
 
 | Variable | Interpretation |
 |---|---|

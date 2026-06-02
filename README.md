@@ -427,5 +427,7 @@ Chheang, Sreyphea. *Termite Mounds, Input Allocation, and Agricultural Misalloca
 For questions about the replication code, please contact:
 
 **Sreyphea Chheang**  
+
 Email: [spchheang@gmail.com](mailto:spchheang@gmail.com)
+
 GitHub: <https://github.com/spchheang>

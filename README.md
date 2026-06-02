@@ -58,21 +58,26 @@ The findings suggest that improving agricultural productivity requires more than
 
 ### 1. Plot-Level Survey Data
 
-The main dataset comes from plot-level surveys of rice farmers in Kampong Chhnang Province, Cambodia, covering the 2021-2023 rice-growing seasons. The survey focuses on villages located in and around the Chrey Bak catchment.
+The main dataset used in this paper comes from plot-level survey data from Lao et al. (2024):
+
+[Lao et al. (2024) Plot-Level Survey Data](https://dataverse.ird.fr/dataset.xhtml?persistentId=doi:10.23708/U6WMCP)
+
+The dataset covers rice farmers in Kampong Chhnang Province, Cambodia, during the 2021–2023 rice-growing seasons. The survey focuses on villages located in and around the Chrey Bak catchment.
 
 The data include information on:
 
-- Rice output
-- Land input
-- Labor input
-- Seed, fertilizer, and pesticide use
-- Termite-mound presence
-- Termite-mound soil use
-- Household characteristics
-- Plot characteristics
-- Village, commune, district, season, and year identifiers
+* Rice output
+* Land input
+* Labor input
+* Seed, fertilizer, and pesticide use
+* Termite-mound presence
+* Termite-mound soil use
+* Household characteristics
+* Plot characteristics
+* Village, commune, district, season, and year identifiers
 
-The data distinguish between plots with termite mounds and plots where farmers use termite-mound soil as an amendment.
+The data distinguish between plots with termite mounds and plots where farmers use termite-mound soil as a soil amendment.
+
 
 ### 2. Geographic and Climate Data
 

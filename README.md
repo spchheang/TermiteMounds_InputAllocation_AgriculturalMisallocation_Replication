@@ -1,104 +1,93 @@
-# Replication Code for the Paper  
-# *Termite Mounds, Input Allocation, and Agricultural Misallocation*
+# Replication Code for *Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots*
+
+This repository contains the replication files for the working paper:
+
+**_Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots_. Working paper.**
+
+The paper studies agricultural misallocation in Cambodian rice production using plot-level panel data from the Chrey Bak catchment in Kampong Chhnang Province, Cambodia. The analysis examines whether land and labor are allocated efficiently across rice plots when part of productivity heterogeneity is observable through termite-mound-soil use.
 
 ## Author
 
 **Sreyphea Chheang**  
 Postdoctoral Fellow, CERDI, Université Clermont Auvergne  
-Ph.D. in Economics, York University (2025)  
-
+Ph.D. in Economics, York University  
 GitHub: <https://github.com/spchheang>
 
----
+## Project Overview
 
-## Overview
+The replication files use **Python** and **Stata** to:
 
-This repository contains the replication code for the paper *Termite Mounds, Input Allocation, and Agricultural Misallocation*. The project studies agricultural misallocation in rice production in the Chrey Bak catchment, Kampong Chhnang Province, Cambodia.
+- prepare village-level geographic and climate variables;
+- clean and merge plot-level survey data;
+- estimate production-function parameters for land and labor;
+- construct residual-based plot-level productivity measures;
+- adjust measured productivity for measurement error and transitory shocks;
+- calculate output gains from reallocating land and labor under an efficient benchmark;
+- decompose total gains into within-type and between-type components; and
+- produce the main tables, appendix tables, and figures used in the paper.
 
-The replication files use **Python** and **Stata** to prepare geographic and climate variables, clean and merge plot-level survey data, estimate production-function parameters, construct plot-level productivity measures, calculate efficiency gains from input reallocation, decompose misallocation into within-type and between-type components, and produce tables and figures for the paper.
+The main empirical classification is based on **termite-mound-soil use**. Plots that use termite-mound soil as a soil amendment are classified as **TM-soil plots**, while plots that do not use termite-mound soil are classified as **NTM-soil plots**. The paper also discusses termite-mound presence, but termite-mound-soil use is the preferred classification because it is more directly related to the productivity comparison used in the empirical framework.
 
-The analysis focuses on two related but distinct margins:
+## Research Question
 
-1. **Termite-mound presence**, which captures ecological heterogeneity across plots.
-2. **Termite-mound soil use**, which captures farmers' use of termite-mound soil as a soil amendment.
+The paper asks whether observed land and labor allocations across rice plots are close to the allocation implied by an efficient benchmark. It also asks whether output losses arise mainly from:
 
-The main objective is to examine whether land and labor are efficiently allocated across plots that differ in productivity and ecological characteristics, and to quantify potential output gains from reallocating inputs according to an efficient benchmark.
+1. misallocation **between** TM-soil and NTM-soil plots; or
+2. misallocation **within** each observable plot type.
 
----
+This distinction matters because large between-type gains would suggest that the broad allocation of inputs between TM-soil and NTM-soil plots is the main problem. Large within-type gains would instead suggest that land and labor are not allocated efficiently among plots that appear similar according to this observable ecological classification.
 
-## Research Background
+## Main Findings Reproduced by the Code
 
-The paper studies agricultural misallocation in a setting where productivity heterogeneity is partly observable and linked to ecological variation from termite mounds. Termite mounds can affect soil characteristics such as nutrient content, organic matter, and water retention. These ecological differences may generate systematic variation in plot-level productivity.
+The replication files reproduce the paper's main results:
 
-Using plot-level panel data from rice farmers in Cambodia, the paper estimates productivity from a production function and compares the observed allocation of land and labor with an efficient allocation implied by a planner's benchmark. The empirical framework also corrects productivity measures for measurement error and transitory shocks.
+- Efficient reallocation of land and labor would increase aggregate rice output by about **45 percent** at the Chrey Bak catchment level after adjusting measured productivity for measurement error and transitory shocks.
+- Most adjusted gains come from reallocating inputs **within** the same observable ecological type.
+- At the catchment level, within-type reallocation accounts for about **95 percent** of total adjusted gains, while between-type reallocation accounts for about **5 percent**.
+- Positive efficiency gains remain when reallocation is restricted to districts, communes, or villages.
+- Robustness checks show that the magnitude of estimated gains varies across specifications, but the qualitative conclusion remains the same: within-type misallocation is the dominant source of output loss.
 
-The paper distinguishes between misallocation across ecological types and misallocation within ecological types. This distinction helps identify whether output losses arise mainly from the allocation of inputs between termite-mound and non-termite-mound plots, or from inefficient input allocation among plots of the same type.
-
----
-
-## Main Findings
-
-The paper finds substantial inefficiencies in the allocation of land and labor across rice plots. After adjusting for measurement error and transitory shocks, reallocating inputs according to the efficient benchmark would increase aggregate rice output by approximately 45 percent at the Chrey Bak catchment level.
-
-Most of these gains arise from **within-type reallocation**, rather than from **between-type reallocation**. This means that the main source of inefficiency is not simply the allocation of inputs between termite-mound and non-termite-mound plots. Instead, most efficiency losses arise because inputs are not efficiently allocated among plots with similar ecological characteristics.
-
-The paper also highlights an additional margin of inefficiency related to the limited use of termite-mound soil amendment. Even though termite-mound soil can increase rice yields, its use remains limited among plots with access to termite mounds. This suggests that productivity losses arise not only from the misallocation of conventional inputs such as land and labor, but also from the underuse of locally available productivity-enhancing inputs.
-
----
-
-## Significance
-
-This project contributes to the literature on agricultural productivity and misallocation in developing economies. It shows that ecological heterogeneity can provide an observable source of productivity differences across plots and that local distortions in input allocation can generate large output losses.
-
-The findings suggest that improving agricultural productivity requires more than reallocating conventional inputs across broad plot types. Policies may also need to address barriers to efficient input use within local areas and encourage the adoption of locally available productivity-enhancing inputs, such as termite-mound soil amendment.
-
----
-
-## Data Sources Used in This Paper
+## Data Sources
 
 ### 1. Plot-Level Survey Data
 
-The main dataset used in this paper comes from plot-level survey data from Lao et al. (2024):
+The main data source is the plot-level survey dataset from Lao et al. (2024):
 
-[Lao et al. (2024) Plot-Level Survey Data](https://dataverse.ird.fr/dataset.xhtml?persistentId=doi:10.23708/U6WMCP)
+[Lao et al. (2024), Farmer economic and social surveys in the Chrey Bak catchment, Cambodia](https://dataverse.ird.fr/dataset.xhtml?persistentId=doi:10.23708/U6WMCP)
 
-The dataset covers rice farmers in Kampong Chhnang Province, Cambodia, during the 2021–2023 rice-growing seasons. The survey focuses on villages located in and around the Chrey Bak catchment.
+The survey covers rice farmers in Kampong Chhnang Province, Cambodia, during the 2021--2023 rice-growing seasons. The sample used in the paper contains **3,424 plot-season observations**, covering **1,144 unique plots**, **594 farmers**, **92 villages**, **21 communes**, and **four districts**.
 
-The data include information on:
+The survey includes information on:
 
-* Rice output
-* Land input
-* Labor input
-* Seed, fertilizer, and pesticide use
-* Termite-mound presence
-* Termite-mound soil use
-* Household characteristics
-* Plot characteristics
-* Village, commune, district, season, and year identifiers
+- rice output;
+- land input;
+- labor input;
+- seed, fertilizer, pesticide, and other production inputs;
+- termite-mound presence;
+- termite-mound-soil use;
+- household characteristics;
+- plot characteristics; and
+- village, commune, district, season, and year identifiers.
 
-The data distinguish between plots with termite mounds and plots where farmers use termite-mound soil as a soil amendment.
-
+The distinction between **termite-mound presence** and **termite-mound-soil use** is important. Termite-mound presence captures an ecological feature of the plot, while termite-mound-soil use captures a farmer's soil-amendment decision.
 
 ### 2. Geographic and Climate Data
 
-The replication files also construct village-level geographic and climate characteristics using Python. These variables are used as additional controls in the empirical analysis.
+The replication files also construct village-level geographic and climate variables. These variables are merged with the plot-level survey data and used in robustness checks.
 
-The geographic and climate data include:
+The geographic and climate variables include:
 
-- Soil texture and soil properties from SoilGrids
-- Elevation and terrain characteristics
-- Climate variables from WorldClim
-- Waterway and distance-to-water measures
-- Village coordinates and administrative boundaries
-- Chrey Bak catchment boundary data
-
-These variables are merged with the plot-level survey data and used in robustness checks.
-
----
+- soil texture and soil properties;
+- elevation and terrain characteristics;
+- climate variables;
+- waterway and distance-to-water measures;
+- village coordinates;
+- administrative boundaries; and
+- the Chrey Bak catchment boundary.
 
 ## Software Requirements
 
-The replication code uses both Python and Stata.
+The replication package uses **Python** and **Stata**.
 
 ### Python
 
@@ -113,7 +102,7 @@ Python is used mainly to prepare geographic and climate variables. The required 
 - `pathlib`
 - `os`
 
-These packages are loaded in the setup notebook:
+The main Python setup file is:
 
 ```text
 0_Setup.ipynb
@@ -121,19 +110,17 @@ These packages are loaded in the setup notebook:
 
 ### Stata
 
-Stata is used for data cleaning, estimation, productivity construction, efficiency calculations, decomposition of misallocation, robustness checks, and table generation.
+Stata is used for data cleaning, estimation, productivity construction, efficiency calculations, decomposition analysis, robustness checks, and table generation.
 
-The main Stata script is:
+The main Stata file is:
 
 ```text
 0_master.do
 ```
 
----
-
 ## Repository Structure
 
-A suggested structure for the repository is:
+The replication package is organized as follows:
 
 ```text
 .
@@ -168,200 +155,23 @@ A suggested structure for the repository is:
 └── Table/
 ```
 
----
+## Replication Workflow
 
-## Python Workflow
+### Prepare the Raw Data Folder
 
-Python is used to construct geographic and climate variables at the village level. The setup notebook defines common file paths, loads required packages, and identifies the input and output files used in the geographic-data workflow.
+Place the required raw datasets in the `RawData/` folder. Some raw datasets may not be included directly in this repository because of data-access or data-use restrictions. The plot-level survey data can be obtained from the IRD Dataverse link listed above.
 
-The Python scripts prepare or use the following files:
+### Set Project Paths
 
-```text
-CB_District.kml
-TM_Village.csv
-TM_Village_with_geo_climate_1km.csv
-TM_Village_with_geo_climate_1km_waterdist.csv
-```
-
-The Python workflow is used to:
-
-1. Load administrative boundary files and the Chrey Bak catchment boundary.
-2. Load village coordinates from `TM_Village.csv`.
-3. Extract soil, terrain, climate, and water-access variables.
-4. Calculate village-level geographic characteristics.
-5. Export processed village-level geographic and climate variables for use in Stata.
-
----
-
-## Stata Workflow
-
-The Stata workflow is controlled by:
-
-```text
-0_master.do
-```
-
-The master script sets the project directory, defines paths for raw data, cleaned data, figures, and tables, and then runs the main Stata scripts sequentially.
-
-### Main Stata Steps
-
-The Stata workflow performs the following steps:
-
-1. Clean and merge the plot-level survey data.
-2. Estimate production-function parameters for land and labor.
-3. Construct plot-level total factor productivity.
-4. Adjust productivity to reduce the influence of measurement error and transitory shocks.
-5. Test productivity differences across termite-mound and non-termite-mound plot types.
-6. Generate summary statistics.
-7. Calculate efficiency gains from reallocating land and labor.
-8. Decompose total efficiency gains into between-type and within-type components.
-9. Calculate the contribution of termite-mound and non-termite-mound plots to total gains.
-10. Repeat the analysis at the farm level.
-11. Run robustness checks using additional household and geographic controls.
-12. Export tables in LaTeX format.
-
----
-
-## Main Stata Scripts
-
-The main Stata files include:
-
-```text
-4_Cleaned_Merged_Data.do
-```
-
-Cleans and merges the main plot-level survey data with geographic and climate variables.
-
-```text
-5_1_Cal_betaL_betaN.do
-```
-
-Estimates production-function parameters for land and labor.
-
-```text
-6_2_TFP_VC_Con_Winsorize_FullSample.do
-```
-
-Constructs plot-level productivity measures and applies correction for measurement error and transitory shocks.
-
-```text
-6_2_1_TFP_VC_Con_Winsorize_FullSample_Type.do
-```
-
-Constructs productivity measures by ecological type.
-
-```text
-6_3_Test_mean_TFP.do
-```
-
-Tests productivity differences across plot types.
-
-```text
-6_4_Stats_Tab.do
-```
-
-Produces summary-statistics tables.
-
-```text
-6_5_TFP_VC_Con_Winsorize_FullSample_IVCRE.do
-```
-
-Constructs productivity measures using the IV-CRE specification.
-
-```text
-7_1_Cal_Efficiency.do
-```
-
-Calculates total efficiency gains from reallocating inputs according to the efficient benchmark.
-
-```text
-7_2_Cal_Share_Efficiency.do
-```
-
-Decomposes aggregate efficiency gains into within-type and between-type components.
-
-```text
-7_3_Cal_Share_Efficiency_ByGroup.do
-```
-
-Calculates the contribution of each plot type to total efficiency gains.
-
-```text
-7_4_Cal_Efficiency_HH.do
-```
-
-Calculates efficiency gains at the farm or household level.
-
-```text
-7_5_Cal_Share_Efficiency_HH.do
-```
-
-Decomposes farm-level efficiency gains.
-
-```text
-7_6_Cal_Share_Efficiency_ByGroup_HH.do
-```
-
-Calculates the contribution of each plot type to farm-level efficiency gains.
-
-```text
-7_7_Cal_Efficiency_IVCRE.do
-```
-
-Calculates efficiency gains using the IV-CRE productivity specification.
-
-```text
-8_1_Cal_Efficiency_MOD.do
-8_2_Cal_Share_Efficiency_MOD.do
-8_3_Cal_Share_Efficiency_ByGroup_MOD.do
-8_4_Cal_betaL_betaN_MOD.do
-8_5_TFP_VC_Con_Winsorize_FullSample_MOD.do
-```
-
-Run robustness checks using additional household and geographic controls.
-
----
-
-## Outputs
-
-The code produces the following outputs:
-
-- Cleaned analysis datasets
-- Village-level geographic and climate variables
-- Estimated production-function parameters
-- Plot-level productivity measures
-- Adjusted productivity measures
-- Efficiency-gain estimates
-- Within-type and between-type decomposition results
-- Farm-level efficiency results
-- Robustness-check results
-- Summary-statistics tables
-- LaTeX tables
-- Figures used in the paper
-
-Outputs are saved in the project folders defined in `0_master.do`, including:
-
-```text
-Data/
-Figure/
-Table/
-```
-
----
-
-## How to Run the Replication Code
-
-### Step 1: Set the Project Directory
-
-Before running the code, edit the project paths in both the Python setup notebook and the Stata master file.
+Before running the code, edit the project paths in the Python setup notebook and the Stata master file.
 
 In Python, update the base directory in:
 
 ```text
-0_Setup.ipynb
+Python/0_Setup.ipynb
 ```
 
-In Stata, update the path in:
+In Stata, update the project path in:
 
 ```stata
 global PATH "/your/project/path"
@@ -370,34 +180,41 @@ global PATH "/your/project/path"
 inside:
 
 ```text
-0_master.do
+StataFile/0_master.do
 ```
 
-### Step 2: Run the Python Files
+### Run the Python Files
 
-Run the Python notebooks first to construct geographic and climate variables at the village level.
-
-The main setup file is:
+Run the Python notebooks first if you need to reconstruct the village-level geographic and climate variables. The Python workflow prepares files such as:
 
 ```text
-0_Setup.ipynb
+CB_District.kml
+TM_Village.csv
+TM_Village_with_geo_climate_1km.csv
+TM_Village_with_geo_climate_1km_waterdist.csv
 ```
 
-This file loads the required packages and defines the paths used in the geographic-data workflow.
+The Python workflow:
 
-### Step 3: Run the Stata Master File
+1. loads administrative and catchment boundary files;
+2. loads village coordinates;
+3. extracts soil, terrain, climate, and water-access variables;
+4. calculates village-level geographic characteristics; and
+5. exports the processed geographic and climate variables for use in Stata.
 
-After preparing the geographic and climate variables, run:
+### Run the Stata Master File
+
+After preparing the required input files, run:
 
 ```text
-0_master.do
+StataFile/0_master.do
 ```
 
-This file executes the main data-cleaning, estimation, productivity, misallocation, decomposition, and robustness-check routines.
+The master file runs the Stata scripts in order and produces the cleaned datasets, productivity measures, efficiency-gain calculations, decomposition results, robustness checks, tables, and figures.
 
-### Step 4: Check Output Folders
+### Check Outputs
 
-After the scripts finish running, check the following folders:
+The main outputs are saved in the folders defined in `0_master.do`, including:
 
 ```text
 Data/
@@ -405,34 +222,113 @@ Figure/
 Table/
 ```
 
-These folders contain the cleaned data, figures, and LaTeX tables generated by the replication code.
+## Stata Workflow Details
 
----
+The Stata workflow performs the following main tasks:
 
-## Notes
+1. **Data cleaning and merging**  
+   Cleans plot-level survey data and merges it with geographic and climate variables.
 
-- Some raw datasets may not be included in this repository because of data-use restrictions.
-- Users should place all required raw data files in the `RawData/` folder before running the code.
-- The code assumes that the folder structure follows the paths defined in `0_master.do` and `0_Setup.ipynb`.
-- The Python files should be run before the Stata replication files if geographic and climate variables need to be reconstructed.
-- The Stata master file can be modified to run only selected parts of the analysis.
+2. **Production-function estimation**  
+   Estimates a Cobb--Douglas production function using land and labor as the main inputs.
 
----
+3. **Productivity construction**  
+   Constructs residual-based plot-level total factor productivity.
+
+4. **Productivity adjustment**  
+   Adjusts measured productivity to reduce the influence of measurement error and transitory shocks.
+
+5. **Mean-productivity comparison**  
+   Tests productivity differences between TM-soil and NTM-soil plots.
+
+6. **Efficiency-gain calculation**  
+   Compares observed land and labor allocations with the efficient benchmark at the catchment, district, commune, and village levels.
+
+7. **Decomposition analysis**  
+   Decomposes total output gains into within-type and between-type components.
+
+8. **Group contribution analysis**  
+   Calculates how TM-soil and NTM-soil plots contribute to total efficiency gains.
+
+9. **Farm-level analysis**  
+   Repeats the efficiency and decomposition exercises at the farm or household level.
+
+10. **Robustness checks**  
+    Runs alternative specifications, including IV-CRE productivity estimates and models with additional household and geographic controls.
+
+11. **Tables and figures**  
+    Exports summary statistics, production-function estimates, efficiency results, decomposition tables, robustness tables, and figures.
+
+## Main Stata Scripts
+
+| Script | Purpose |
+|---|---|
+| `4_Cleaned_Merged_Data.do` | Cleans and merges plot-level survey data with geographic and climate variables. |
+| `5_1_Cal_betaL_betaN.do` | Estimates production-function parameters for land and labor. |
+| `6_2_TFP_VC_Con_Winsorize_FullSample.do` | Constructs plot-level productivity and applies the benchmark productivity adjustment. |
+| `6_2_1_TFP_VC_Con_Winsorize_FullSample_Type.do` | Constructs productivity measures by observable plot type. |
+| `6_3_Test_mean_TFP.do` | Tests mean productivity differences across plot types. |
+| `6_4_Stats_Tab.do` | Produces summary-statistics tables. |
+| `6_5_TFP_VC_Con_Winsorize_FullSample_IVCRE.do` | Constructs productivity measures using the IV-CRE specification. |
+| `7_1_Cal_Efficiency.do` | Calculates total efficiency gains from reallocating land and labor. |
+| `7_2_Cal_Share_Efficiency.do` | Decomposes gains into within-type and between-type components. |
+| `7_3_Cal_Share_Efficiency_ByGroup.do` | Calculates the contribution of TM-soil and NTM-soil plots to total gains. |
+| `7_4_Cal_Efficiency_HH.do` | Calculates farm- or household-level efficiency gains. |
+| `7_5_Cal_Share_Efficiency_HH.do` | Decomposes farm- or household-level efficiency gains. |
+| `7_6_Cal_Share_Efficiency_ByGroup_HH.do` | Calculates group contributions at the farm or household level. |
+| `7_7_Cal_Efficiency_IVCRE.do` | Calculates efficiency gains using the IV-CRE productivity specification. |
+| `8_1_Cal_Efficiency_MOD.do` | Runs modified/robustness efficiency calculations. |
+| `8_2_Cal_Share_Efficiency_MOD.do` | Runs modified/robustness decomposition calculations. |
+| `8_3_Cal_Share_Efficiency_ByGroup_MOD.do` | Runs modified/robustness group-contribution calculations. |
+| `8_4_Cal_betaL_betaN_MOD.do` | Estimates modified/robustness production-function parameters. |
+| `8_5_TFP_VC_Con_Winsorize_FullSample_MOD.do` | Constructs modified/robustness productivity measures. |
+
+## Outputs Produced by the Code
+
+The code produces:
+
+- cleaned analysis datasets;
+- village-level geographic and climate variables;
+- production-function parameter estimates;
+- residual-based plot-level productivity measures;
+- adjusted productivity measures;
+- mean-productivity comparisons by plot type;
+- efficiency-gain estimates by geographic level;
+- within-type and between-type decomposition results;
+- contribution of TM-soil and NTM-soil plots to total gains;
+- farm-level efficiency and decomposition results;
+- robustness-check results;
+- LaTeX tables; and
+- figures used in the paper.
+
+## Notes on Interpretation
+
+The benchmark results use the adjusted productivity measure because unadjusted productivity may reflect measurement error and transitory shocks. The adjusted measure provides a more conservative estimate of persistent plot-level productivity differences.
+
+The decomposition should be interpreted carefully. A small between-type component does not mean that termite-mound-soil use is unimportant. Instead, it means that most estimated output losses come from the allocation of land and labor among plots within the same TM-soil or NTM-soil group.
+
+The code identifies the size and structure of misallocation, but it does not identify the exact mechanisms behind it. Possible mechanisms include information frictions, plot distance, seasonal labor constraints, hiring frictions, and within-household allocation decisions.
 
 ## Citation
 
-If you use this replication package, please cite:
+If you use this replication package, please cite the paper and the data source.
 
-Chheang, Sreyphea. *Termite Mounds, Input Allocation, and Agricultural Misallocation*. Working paper.
+### Paper
 
----
+```text
+Chheang, Sreyphea. Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots. Working paper.
+```
+
+### Data
+
+```text
+Lao, C., Jouquet, P., Sok, K., Marchand, S., and Audibert, M. 2024. Farmer economic and social surveys in the Chrey Bak catchment, Cambodia: Rainy Season Rice Farming Activities, and Perceptions and Usage of Termite Mounds. doi:10.23708/U6WMCP.
+```
 
 ## Contact
 
 For questions about the replication code, please contact:
 
 **Sreyphea Chheang**  
-
-Email: [spchheang@gmail.com](mailto:spchheang@gmail.com)
-
+Email: [spchheang@gmail.com](mailto:spchheang@gmail.com)  
 GitHub: <https://github.com/spchheang>

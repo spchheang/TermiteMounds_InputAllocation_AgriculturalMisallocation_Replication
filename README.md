@@ -2,7 +2,7 @@
 
 This repository contains the replication files for the working paper:
 
-**_Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots_. Working paper.**
+**_Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots_.**
 
 The paper studies agricultural misallocation in Cambodian rice production using plot-level panel data from the Chrey Bak catchment in Kampong Chhnang Province, Cambodia. The analysis examines whether land and labor are allocated efficiently across rice plots when part of productivity heterogeneity is observable through termite-mound-soil use.
 

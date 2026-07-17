@@ -41,7 +41,7 @@ This distinction matters because large between-type gains would suggest that the
 
 The replication files reproduce the paper's main results:
 
-- Efficient reallocation of land and labor would increase aggregate rice output by about **45 percent** at the Chrey Bak catchment level after adjusting measured productivity for measurement error and transitory shocks.
+- Efficient reallocation of land and labor would increase aggregate rice output by about **43 percent** at the Chrey Bak catchment level after adjusting measured productivity for measurement error and transitory shocks.
 - Most adjusted gains come from reallocating inputs **within** the same observable ecological type.
 - At the catchment level, within-type reallocation accounts for about **95 percent** of total adjusted gains, while between-type reallocation accounts for about **5 percent**.
 - Positive efficiency gains remain when reallocation is restricted to districts, communes, or villages.
@@ -55,7 +55,7 @@ The main data source is the plot-level survey dataset from Lao et al. (2024):
 
 [Lao et al. (2024), Farmer economic and social surveys in the Chrey Bak catchment, Cambodia](https://dataverse.ird.fr/dataset.xhtml?persistentId=doi:10.23708/U6WMCP)
 
-The survey covers rice farmers in Kampong Chhnang Province, Cambodia, during the 2021--2023 rice-growing seasons. The sample used in the paper contains **3,424 plot-season observations**, covering **1,144 unique plots**, **594 farmers**, **92 villages**, **21 communes**, and **four districts**.
+The survey covers rice farmers in Kampong Chhnang Province, Cambodia, during the 2021--2023 rice-growing seasons. The sample used in the paper contains **3,367 plot-season observations**, covering **1,144 unique plots**, **594 farmers**, **92 villages**, **21 communes**, and **four districts**.
 
 The survey includes information on:
 

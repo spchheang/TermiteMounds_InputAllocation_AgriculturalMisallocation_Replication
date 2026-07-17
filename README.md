@@ -316,7 +316,7 @@ If you use this replication package, please cite the paper and the data source.
 ### Paper
 
 ```text
-Chheang, Sreyphea. Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots. Working paper.
+Chheang, S., Marchand, S., and Lao, C. 2026. Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots. Working paper.
 ```
 
 ### Data

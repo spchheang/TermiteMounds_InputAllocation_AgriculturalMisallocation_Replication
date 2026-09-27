@@ -24,7 +24,7 @@ The Chrey Bak Catchment boundary file and village reference file can be download
 
 [Download Chrey Bak Catchment Files](https://drive.google.com/file/d/1MEMIOMyEYSFPZOt940Ox1upm_UVLQH45/view?usp=sharing)
 
-[Download TM Village Files](ADD-LINK-HERE)
+[Download TM Village Files](https://drive.google.com/file/d/1jpzY04HPs0JqG70HIY_RNJocdBq4cnZd/view?usp=sharing)
 
 #### Data Needed
 

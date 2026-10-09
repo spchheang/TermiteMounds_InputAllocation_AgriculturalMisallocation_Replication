@@ -316,13 +316,13 @@ If you use this replication package, please cite the paper and the data source.
 ### Paper
 
 ```text
-Chheang, S., Marchand, S., and Lao, C. 2026. Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots. Working paper.
+Chheang, S., Marchand, S., and Lao, C. (2026). Observable Ecological Heterogeneity and Agricultural Misallocation: Evidence from Cambodian Rice Plots. Working paper.
 ```
 
 ### Data
 
 ```text
-Lao, C., Jouquet, P., Sok, K., Marchand, S., and Audibert, M. 2024. Farmer economic and social surveys in the Chrey Bak catchment, Cambodia: Rainy Season Rice Farming Activities, and Perceptions and Usage of Termite Mounds. doi:10.23708/U6WMCP.
+Lao, C., Jouquet, P., Sok, K., Marchand, S., and Audibert, M. (2024). Farmer economic and social surveys in the Chrey Bak catchment, Cambodia: Rainy Season Rice Farming Activities, and Perceptions and Usage of Termite Mounds. doi:10.23708/U6WMCP.
 ```
 
 ## Contact
